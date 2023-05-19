@@ -110,6 +110,10 @@
         justify-content: space-between;
       }
 
+      .bwc-footer-extra-details {
+        display: flex;
+        gap: 170px;
+      }
       .bwc-footer-location-info {
         margin-top: 10px;
         display: flex;
@@ -132,7 +136,7 @@
         font-size: 24px;
       }
 
-      .bwc-footer-submit-button {
+      .bwc-button-common {
         background: linear-gradient(
           180deg,
           rgba(68, 40, 22, 0.8) 0%,
@@ -140,12 +144,22 @@
         );
         border-radius: 4px;
         color: #ffffff;
+      }
+
+      .bwc-footer-submit-button {
         width: 120px;
         height: 50px;
       }
 
       h3 {
         font-size: 28px;
+      }
+
+      /* Responsive for mobile portrait */
+      @media screen and (max-device-width: 480px) and (orientation: portrait) {
+        .bwc-footer-content {
+          width: 200px;
+        }
       }
     </style>
   </head>
@@ -262,26 +276,28 @@
               </div>
             </div>
           </div>
-          <div class="bwc-footer-company">
-            <h3>Company</h3>
-            <ul>
-              <li>Home</li>
-              <li>Order now</li>
-              <li>About us</li>
-              <li>Gallery</li>
-              <li>Franchise</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div class="bwc-footer-company">
-            <h3>Quick Links</h3>
-            <ul>
-              <li>Terms & Conditions</li>
-              <li>Careers</li>
-              <li>Events & Creating</li>
-              <li>Store Locator</li>
-              <li>Disclaimer</li>
-            </ul>
+          <div class="bwc-footer-extra-details">
+            <div class="bwc-footer-company">
+              <h3>Company</h3>
+              <ul>
+                <li>Home</li>
+                <li>Order now</li>
+                <li>About us</li>
+                <li>Gallery</li>
+                <li>Franchise</li>
+                <li>Contact us</li>
+              </ul>
+            </div>
+            <div class="bwc-footer-company">
+              <h3>Quick Links</h3>
+              <ul>
+                <li>Terms & Conditions</li>
+                <li>Careers</li>
+                <li>Events & Creating</li>
+                <li>Store Locator</li>
+                <li>Disclaimer</li>
+              </ul>
+            </div>
           </div>
           <form action="" class="bwc-footer-form">
             <input
@@ -308,7 +324,9 @@
               placeholder="Message"
               class="bwc-footer-input message"
               required />
-            <button class="bwc-footer-submit-button">Submit</button>
+            <button class="bwc-button-common bwc-footer-submit-button">
+              Submit
+            </button>
           </form>
         </div>
         <div>
